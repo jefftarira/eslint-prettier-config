@@ -11,8 +11,9 @@ module.exports = {
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
+      modules: true,
     },
-    ecmaVersion: 'latest',
+    ecmaVersion: '2021',
     sourceType: 'module',
   },
   plugins: ['react', 'prettier', 'import'],
@@ -25,11 +26,11 @@ module.exports = {
         printWidth: 80,
         trailingComma: 'all',
         singleQuote: true,
-        trailingComma: 'es5',
-        semi: true,
+        semi: false,
         tabWidth: 2,
         arrowParens: 'always',
         bracketSpacing: true,
+        bracketSameLine: true,
       },
     ],
     'no-unused-vars': [
@@ -42,6 +43,7 @@ module.exports = {
     ],
     'import/order': ['warn', { 'newlines-between': 'always' }],
     'react/self-closing-comp': 'warn',
+    'react-hooks/exhaustive-deps': 'off',
     'react/jsx-sort-props': [
       'warn',
       {
@@ -70,4 +72,4 @@ module.exports = {
       },
     ],
   },
-};
+}
